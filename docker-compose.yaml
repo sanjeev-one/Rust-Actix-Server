@@ -1,0 +1,5 @@
+services:
+  actix:
+    build: .
+    ports:
+      - "8080:8080"
