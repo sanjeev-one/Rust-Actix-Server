@@ -6,6 +6,12 @@ async fn hello() -> impl Responder {
     HttpResponse::Ok().body("Hello world!")
 }
 
+#[get("/hi")]
+async fn hello() -> impl Responder {
+    println!("Hello there thank you for visiting!");
+    HttpResponse::Ok().body("Visitor found!")
+}
+
 #[post("/echo")]
 async fn echo(req_body: String) -> impl Responder {
     HttpResponse::Ok().body(req_body)
